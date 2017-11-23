@@ -90,11 +90,11 @@
 
 <style type="text/css">
     body{
-        background: #d1e0eb;
+        background: #f4f4f4;
     }
 
     .content {
-        background-color: #f4f4f4;
+        background-color: #ffffff;
         max-height: 100%;
         max-width: 100%;
         border: 2px solid #6EA4CA;
