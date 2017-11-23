@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title','Bakit List')
 @section('content')
 
     <!-- Bootstrap Boilerplate... -->
