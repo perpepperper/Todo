@@ -67,6 +67,9 @@
     <body>
         <div class="container">
             <div class="row">
+                <div class="col-md-12 head-text">
+                    <h1>Bakit List</h1>
+                </div>
                 <div class="col-md-6 col-md-offset-3 content">
                     @if (Route::has('login'))
                         @auth
@@ -91,6 +94,13 @@
 <style type="text/css">
     body{
         background: #f4f4f4;
+    }
+
+    .head-text h1 {
+        font-family: Acme-Regular;
+        font-size: 100px;
+        text-align: center;
+        color: #757575;
     }
 
     .content {
