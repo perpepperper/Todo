@@ -108,7 +108,7 @@
         max-height: 100%;
         max-width: 100%;
         border: 2px solid #6EA4CA;
-        border-radius: 12px;
+        border-radius: 6px;
         text-align: center;
         padding: 20px 0px 20px 0px;
 
@@ -123,7 +123,7 @@
         margin: 20px 0px 20px 0px;
         background-color: #f4f4f4;
         border: 1px solid #6EA4CA;
-        border-radius: 12px;
+        border-radius: 6px;
         min-width: 150px;
         font-weight: bold;
         font-size: 20pt;
