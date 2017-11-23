@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <title>Welcome</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+<!--         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css"> -->
 
         <!-- Styles -->
-        <style>
+        <!-- <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -62,34 +62,81 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-        </style>
+        </style> -->
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 content">
+                    @if (Route::has('login'))
+                        @auth
+                        <div class="col-md-6 col-md-offset-3 buttons">
+                            <a href="{{ url('/home') }}"><button>Home</button></a>
+                        </div>            
+                        @else
+                        <div class="col-md-6 buttons">
+                            <a href="{{ route('login') }}"><button>Login</button></a>
+                        </div>
+                        <div class="col-md-6 buttons">
+                            <a href="{{ route('register') }}"><button>Register</button></a>
+                        </div>
+                        @endauth
+                    @endif
                 </div>
             </div>
         </div>
     </body>
 </html>
+
+<style type="text/css">
+    body{
+        background: #d1e0eb;
+    }
+
+    .content {
+        background-color: #f4f4f4;
+        max-height: 100%;
+        max-width: 100%;
+        border: 2px solid #6EA4CA;
+        border-radius: 12px;
+        text-align: center;
+        padding: 20px 0px 20px 0px;
+
+        /*display: flex;
+        justify-content: center;
+        align-items: center;*/
+    }
+
+    .buttons button {
+        color: #0C3C60;
+        padding: 10px;
+        margin: 20px 0px 20px 0px;
+        background-color: #f4f4f4;
+        border: 1px solid #6EA4CA;
+        border-radius: 12px;
+        min-width: 150px;
+        font-weight: bold;
+        font-size: 20pt;
+        outline: none;
+
+        transition: 0.1s ease-in-out;
+    }
+
+    .buttons button:hover {
+        color: #ffffff;
+        background-color: #39729B;
+        border: 1px solid #6EA4CA;
+        outline: none;
+
+        transition: 0.1s ease-in-out;
+    }
+
+    .buttons button:active {
+        color: #F4F4F4;
+        background-color: #0C3C60;
+        border: 1px solid #6EA4CA;
+        box-shadow: 0px 0px 10px 0px #39729B;
+
+        transition: 0.1s ease-in-out;
+    }
+</style>
