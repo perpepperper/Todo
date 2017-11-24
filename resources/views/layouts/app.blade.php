@@ -101,4 +101,15 @@
     .dropdown-menu a:hover {
         background-color: #D1E0EB !important;
     }
+
+    body {
+        background-color: #f4f4f4;
+    }
+
+    .panel-heading {
+        text-align: center;
+        color: #f4f4f4 !important;
+        font-size: 20px;
+        background-color: #6EA4CA !important;
+    }
 </style>
