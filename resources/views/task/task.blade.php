@@ -36,14 +36,15 @@
     <!-- TODO: Current Tasks -->
         @if (count($tasks) > 0)
         <div class="panel panel-default center-block" style="width: 30%">
-            <div class="panel-heading">
+            <div class="panel-heading" data-toggle="collapse" data-target="#pnl-body">
                 Current Tasks
             </div>
 
-            <div class="panel-body">
-                <table class="table table-hover task-table">
+            <div id="pnl-body" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <table class="table table-hover task-table">
 
-                    <!-- Table Headings -->
+                        <!-- Table Headings -->
 <!--                     <thead>
                         <th>Task</th>
                         <th>&nbsp;</th>
@@ -52,26 +53,27 @@
                     <!-- Table Body -->
                     <tbody>
                         @foreach ($tasks as $task)
-                            <tr>
-                                <!-- Task Name -->
-                                <td class="table-text">
-                                    <div>{{ $task->name }}</div>
-                                </td>
+                        <tr>
+                            <!-- Task Name -->
+                            <td class="table-text">
+                                <div>{{ $task->name }}</div>
+                            </td>
 
-                                <td>
-                                    <form action="{{ url('task/'.$task->id) }}" method="POST">
-                                        {{ csrf_field() }}
-                                        {{ method_field('DELETE') }}
+                            <td>
+                                <form action="{{ url('task/'.$task->id) }}" method="POST">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
 
-                                        <button type="submit" id="delete-task-{{ $task->id }}" class="close">
-                                            <i class="fa fa-btn fa-trash"></i>X
-                                        </button>
-                                    </form>
-                                </td>
-                            </tr>
+                                    <button type="submit" id="delete-task-{{ $task->id }}" class="close">
+                                        <i class="fa fa-btn fa-trash"></i>X
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
                         @endforeach
                     </tbody>
                 </table>
+            </div>
             </div>
         </div>
     @endif
